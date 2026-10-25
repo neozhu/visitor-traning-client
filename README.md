@@ -1,4 +1,4 @@
-# VisitTraining — Visitor Compliance Training Management
+# visitorTraining — Visitor Compliance Training Management
 
 **A compliant visit starts before the gate.**
 
@@ -8,11 +8,11 @@
 
 *A contractor's arrival: registration, identity confirmation, compliance training, an exam, and supervised site entry.*
 
-Turn visitor registration and compliance training management into one clear mobile journey. VisitTraining helps visitors, contractors, and logistics drivers prepare for their visit, complete the required training, and keep their results within reach. Training can cover safety, site rules, and other compliance requirements.
+Turn visitor registration and compliance training management into one clear mobile journey. visitorTraining helps visitors, contractors, and logistics drivers prepare for their visit, complete the required training, and keep their results within reach. Training can cover safety, site rules, and other compliance requirements.
 
 Built for factories, industrial sites, warehouses, and the teams that welcome people into them.
 
-## Experience VisitTraining
+## Experience visitorTraining
 
 | Live demo | What to explore |
 | --- | --- |
@@ -23,9 +23,9 @@ Start with the visitor portal on your phone. Choose a visit category to explore 
 
 ## Less paperwork. A clearer path to readiness.
 
-A visit should be easy to arrange, and compliance requirements should be easy to understand. VisitTraining brings the next step into view for every participant.
+A visit should be easy to arrange, and compliance requirements should be easy to understand. visitorTraining brings the next step into view for every participant.
 
-| Your business need | The VisitTraining experience |
+| Your business need | The visitorTraining experience |
 | --- | --- |
 | Make arrival preparation easier | Collect visit details, appointments, destinations, people, and vehicle information in a guided registration flow |
 | Give every person the right training | Match required courses to the visit type and selected areas, with progress tracked individually |
@@ -67,9 +67,9 @@ The mobile portal and the management platform serve different people in the same
 
 This repository contains the **React visitor and learning frontend**. The companion management application uses Blazor and ASP.NET Minimal APIs. The product continues to evolve; see the [frontend notes](web/README.md) and specifications below for the current integration scope.
 
-## Bring VisitTraining to your site
+## Bring visitorTraining to your site
 
-Use your VisitTraining API address and shared access key in `web/.env.local`, following [the environment example](web/.env.example), then run:
+Use your visitorTraining API address and shared access key in `web/.env.local`, following [the environment example](web/.env.example), then run:
 
 ```powershell
 npm --prefix web ci
