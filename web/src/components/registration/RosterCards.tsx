@@ -25,7 +25,7 @@ export function RegistrationRosterCard({ draft, error, onEdit, onRemove }: {
       const name = 'plate' in item ? item.plate : item.name
       return <article className="card roster-card" key={item.id} aria-label={t('{0}登记信息', { 0: name })}>
         <div className="roster-heading">
-          <span className="roster-number" aria-hidden="true">{index + 1}</span><strong>{name}</strong>
+          <span className="roster-number" aria-hidden="true">{index + 1}</span><strong>{name}{item.attachment && <svg className="roster-attachment-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" role="img" aria-label={t('已上传附件')}><title>{t('已上传附件')}</title><path d="m21 11-8.5 8.5a6 6 0 0 1-8.5-8.5l9-9a4 4 0 0 1 5.7 5.7l-9 9a2 2 0 0 1-2.8-2.8L15 6" /></svg>}</strong>
           <RosterActions name={name} onEdit={() => onEdit(item)} onRemove={() => onRemove(item.id)} />
         </div>
         <dl className="roster-details">

@@ -1,18 +1,18 @@
-# VisitSafe
+# VisitTraining — Visitor Compliance Training Management
 
-**A safer visit starts before the gate.**
+**A compliant visit starts before the gate.**
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-![A contractor registers at reception, confirms identity, completes safety training and an exam, then enters the site after staff clearance](doc/images/visitsafe-cover.png)
+![A contractor registers at reception, confirms identity, completes compliance training and an exam, then enters the site after staff clearance](doc/images/visitsafe-cover.png)
 
-*A contractor's arrival: registration, identity confirmation, safety training, an exam, and supervised site entry.*
+*A contractor's arrival: registration, identity confirmation, compliance training, an exam, and supervised site entry.*
 
-Turn visitor registration and safety onboarding into one clear mobile journey. VisitSafe helps visitors, contractors, and logistics drivers prepare for their visit, complete the required training, and keep their results within reach.
+Turn visitor registration and compliance training management into one clear mobile journey. VisitTraining helps visitors, contractors, and logistics drivers prepare for their visit, complete the required training, and keep their results within reach. Training can cover safety, site rules, and other compliance requirements.
 
 Built for factories, industrial sites, warehouses, and the teams that welcome people into them.
 
-## Experience VisitSafe
+## Experience VisitTraining
 
 | Live demo | What to explore |
 | --- | --- |
@@ -23,9 +23,9 @@ Start with the visitor portal on your phone. Choose a visit category to explore 
 
 ## Less paperwork. A clearer path to readiness.
 
-A visit should be easy to arrange, and safety requirements should be easy to understand. VisitSafe brings the next step into view for every participant.
+A visit should be easy to arrange, and compliance requirements should be easy to understand. VisitTraining brings the next step into view for every participant.
 
-| Your business need | The VisitSafe experience |
+| Your business need | The VisitTraining experience |
 | --- | --- |
 | Make arrival preparation easier | Collect visit details, appointments, destinations, people, and vehicle information in a guided registration flow |
 | Give every person the right training | Match required courses to the visit type and selected areas, with progress tracked individually |
@@ -40,7 +40,7 @@ A visit should be easy to arrange, and safety requirements should be easy to und
 
 **Logistics drivers** can provide driver and vehicle details as part of the visit, keeping the transport context connected to the people arriving.
 
-**Contractors and service teams** can register the work visit and complete the safety learning required for their destination areas.
+**Contractors and service teams** can register the work visit and complete the compliance training required for their destination areas.
 
 **People assigned training in advance** can find and complete their learning without first creating a visit application.
 
@@ -48,7 +48,7 @@ A visit should be easy to arrange, and safety requirements should be easy to und
 
 1. **Register your visit.** Choose a visit category, review the notice, and add the appointment, destinations, participants, and applicable vehicle or business information.
 2. **Confirm your identity.** When finding or resuming personal training, use the name and mobile number entered at registration to locate your assigned tasks.
-3. **Learn what matters.** Follow each participant's assigned courses and complete the required safety videos.
+3. **Learn what matters.** Follow each participant's assigned courses and complete the required training videos.
 4. **Take the exam.** Submit answers, review the result, and retake the exam when needed.
 5. **Keep the result close.** View training completion and validity, return to unfinished tasks, and use eligible results on future visits.
 
@@ -58,7 +58,7 @@ Visit approval and training can progress in parallel. Business and area reviews,
 
 The mobile portal and the management platform serve different people in the same visit journey.
 
-| For visitors and learners | For operations and safety teams |
+| For visitors and learners | For operations and compliance teams |
 | --- | --- |
 | Register and review visit information | Manage applications, participant profiles, and vehicle profiles |
 | Find assigned courses and continue learning | Organize courses, assignments, and training records |
@@ -67,9 +67,9 @@ The mobile portal and the management platform serve different people in the same
 
 This repository contains the **React visitor and learning frontend**. The companion management application uses Blazor and ASP.NET Minimal APIs. The product continues to evolve; see the [frontend notes](web/README.md) and specifications below for the current integration scope.
 
-## Bring VisitSafe to your site
+## Bring VisitTraining to your site
 
-Use your VisitSafe API address and shared access key in `web/.env.local`, following [the environment example](web/.env.example), then run:
+Use your VisitTraining API address and shared access key in `web/.env.local`, following [the environment example](web/.env.example), then run:
 
 ```powershell
 npm --prefix web ci

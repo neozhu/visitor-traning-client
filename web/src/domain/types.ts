@@ -1,6 +1,6 @@
 export type EntryType = string
-export interface Person { id: string; name: string; phone: string; company: string; trade?: string }
-export interface Vehicle { id: string; plate: string; driver: string; phone: string; company: string }
+export interface Person { id: string; name: string; phone: string; company: string; trade?: string; attachment?: import('./apiTypes').UploadedFile }
+export interface Vehicle { id: string; plate: string; driver: string; phone: string; company: string; attachment?: import('./apiTypes').UploadedFile }
 export interface AccompanyingVehicle { id: string; plate: string }
 export interface Draft {
   id: string

@@ -19,8 +19,8 @@ export function HomePage() {
   const { store } = useVisitSafe()
   const pending = store.browserTotals().pendingTrainingCount
   return <Screen tabs className="home-screen">
-    <div className="brand-row"><span className="brand-icon"><Icon name="shield-white" size={28} /></span><div className="brand-copy"><strong>VisitSafe</strong><p>{t('访客安全管理与培训')}</p></div><LanguageSwitcher /></div>
-    <section className="home-hero"><div className="hero-copy"><h1>{t('让每一次到访')}<br />{t('更安全、更安心')}</h1><p>{t('来访登记 · 安全培训 · 便捷通行')}</p></div></section>
+    <div className="brand-row"><span className="brand-icon"><Icon name="shield-white" size={28} /></span><div className="brand-copy"><strong>VisitorTraining</strong><p>{t('访客合规管理')}</p></div><LanguageSwitcher /></div>
+    <section className="home-hero"><div className="hero-copy"><h1>{t('欢迎来访')}<br />{t('高效通行')}</h1><p>{t('一键预约 · 便捷登记')}</p></div></section>
     <section aria-labelledby="home-entry-title">
       <div className="home-section-title"><h2 id="home-entry-title">{t('请选择办理事项')}</h2><p>{t('选择对应身份，开始办理。')}</p></div>
       <div className="home-entry-grid grid grid-cols-2 gap-2.5">

@@ -251,7 +251,7 @@ function buildStore(storage: StoragePort) {
     recordSummary: (id: string) => ownerList.find(item => String(item.id) === id),
     requiresNotice: (id: string) => apps.get(appKey(id))?.view === 'notice',
     activateContext(visit: string | null | undefined, scope: Access = 'owner') {
-      const changed = access !== scope
+      const changed = access !== scope || applicationId !== (visit || null)
       access = scope; applicationId = visit || null
       if (changed) rebuild()
     },
@@ -328,7 +328,9 @@ function buildStore(storage: StoragePort) {
       if (Object.keys(errors).length) throw new Error(Object.values(errors)[0])
       if (!draft.noticeAccepted || draft.noticeVersion !== config.notice.version) throw new Error('请重新阅读并确认当前须知')
       if (config.fields.some(field => field.required && !fieldKeys[field.key])) throw new Error('该类型的必填业务字段尚无对应输入项，请联系管理员')
-      const participants = trainingSubjects(draft).map(value => ({ name: value.name, phone: value.phone, company: value.company, trade: value.trade || null }))
+      const subjects = trainingSubjects(draft)
+      if (subjects.some(value => value.attachment && Date.parse(value.attachment.expiresAt) <= api.now())) throw new Error('附件已到期，请重新上传')
+      const participants = subjects.map(value => ({ name: value.name, phone: value.phone, company: value.company, trade: value.trade || null, ...(value.attachment ? { attachmentReference: value.attachment.reference } : {}) }))
       const vehicles = [...draft.vehicles.map(value => ({ plate: normalizePlate(value.plate), transportCompany: value.company.trim(), driverName: value.driver.trim() || null })),
         ...draft.accompanyingVehicles.map(value => ({ plate: normalizePlate(value.plate), transportCompany: null, driverName: null }))]
       const workspace = await request<AppWorkspace>('/applications', { method: 'POST', body: { clientRequestId: draft.id, visitTypeId: config.visitTypeId,

@@ -34,7 +34,7 @@ export function Section({ title, subtitle, children, action }: { title: string; 
 }
 export function Missing({ title = t('申请不存在') }: { title?: string }) {
   const navigate = useNavigate()
-  return <Screen title="VisitSafe"><Empty description={title} /><Button block color="primary" onClick={() => navigate('/records')}>{t('返回我的记录')}</Button></Screen>
+  return <Screen title="VisitorTraining"><Empty description={title} /><Button block color="primary" onClick={() => navigate('/records')}>{t('返回我的记录')}</Button></Screen>
 }
 export function Badge({ children, tone = 'blue' }: { children: ReactNode; tone?: string }) { return <span className={`badge ${tone}`}>{children}</span> }
 export function FieldError({ message }: { message?: string }) { return message ? <p className="field-error" role="alert">{translateMessage(message)}</p> : null }

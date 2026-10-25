@@ -72,7 +72,14 @@ export class ApiClient {
   }
 }
 
-export const api = new ApiClient({ key: import.meta.env.VITE_VISITSAFE_API_KEY ?? '', base: import.meta.env.VITE_VISITSAFE_API_URL })
+const runtimeConfig = (globalThis as typeof globalThis & {
+  __VISITSAFE_CONFIG__?: { apiUrl?: string; apiKey?: string }
+}).__VISITSAFE_CONFIG__
+
+export const api = new ApiClient({
+  key: runtimeConfig?.apiKey ?? import.meta.env.VITE_VISITSAFE_API_KEY ?? '',
+  base: runtimeConfig?.apiUrl ?? import.meta.env.VITE_VISITSAFE_API_URL,
+})
 
 export function readSession<T>(key: string): T | null {
   try { return JSON.parse(sessionStorage.getItem(key) || 'null') as T | null }

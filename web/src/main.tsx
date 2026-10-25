@@ -47,7 +47,7 @@ function Root() {
   const language = useLanguage()
   useEffect(() => {
     document.documentElement.lang = language
-    document.title = `VisitSafe · ${t('来访登记与安全培训')}`
+    document.title = `VisitorTraining · ${t('访客合规管理')}`
   }, [language])
   return <LocalizedContent><ApiBoundary><Suspense fallback={<ErrorBlock fullPage title={t('正在加载')} description={<SpinLoading color="primary" />} />}><ApiApp /></Suspense></ApiBoundary></LocalizedContent>
 }
